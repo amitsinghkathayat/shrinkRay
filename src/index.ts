@@ -9,6 +9,8 @@ import { registerUser, logIn } from './controllers/UserController';
 import { shortenUrl, visitLink, getLinks, removeLink } from './controllers/LinkController';
 
 const app: Express = express();
+app.use(express.static('public', { extensions: ['html'] }));
+
 const { PORT, COOKIE_SECRET } = process.env;
 
 const SQLiteStore = connectSqlite3(session);
@@ -24,6 +26,7 @@ app.use(
   })
 );
 
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.post('/api/users', registerUser); // Create an account

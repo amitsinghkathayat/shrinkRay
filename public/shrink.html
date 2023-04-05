@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="/css/style.css" />
+<title>Shrink a Link | Shrink Ray</title>
+<script src="/shrink" defer></script>
+</head>
+<body>
+  <div class="formCard">
+    <section class="form-container">
+        <div>
+            <h1 class="title gradient-text">Shrink Ray</h1>
+            <h2>Shrink a Link</h2>
+        </div>
+        <div class="form">
+            <form method="POST" action="/api/links">
+                <label for="originalUrl">originalUrl:</label>
+                <input name="originalUrl" id="originalUrl" class="originalUrl" placeholder="Original URL" type="url" required>
+
+
+                <button class="btn" type="submit">Shrink It!</button>
+            </form>
+        </div>
+    </section>
+</div>
+</body>
+</html>
